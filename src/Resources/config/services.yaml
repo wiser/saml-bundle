@@ -1,0 +1,19 @@
+services:
+    # default configuration for services in *this* file
+    _defaults:
+        autowire: true      # Automatically injects dependencies in your services.
+        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+
+    # makes classes in src/ available to be used as services
+    # this creates a service per class whose id is the fully-qualified class name
+    Wiser\SamlBundle\:
+        resource: '../../'
+        exclude:
+            - '../../src/DependencyInjection/'
+
+    # add more service definitions when explicit configuration is needed
+    # please note that last definitions always *replace* previous ones
+    Wiser\SamlBundle\Security\Http\Authenticator\SamlAuthenticator:
+        bind:
+            $successHandler: "@Wiser\\SamlBundle\\Security\\Http\\Authentication\\AuthenticationSuccessHandler"
+            $failureHandler: "@Wiser\\SamlBundle\\Security\\Http\\Authentication\\AuthenticationFailureHandler"

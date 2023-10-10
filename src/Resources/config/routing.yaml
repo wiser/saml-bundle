@@ -1,0 +1,8 @@
+saml_login:
+  path:     /saml/login
+  defaults: { _controller: Wiser\SamlBundle\Controller\SamlController::loginAction }
+
+saml_acs:
+  path:     /saml/acs
+  methods:  ['POST']
+  defaults: { _controller: Wiser\SamlBundle\Controller\SamlController::assertionConsumerServiceAction }

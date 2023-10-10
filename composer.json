@@ -1,0 +1,25 @@
+{
+  "name": "wiser/saml-bundle",
+  "type": "symfony-bundle",
+  "description": "Symfony bundle to use SAML",
+  "keywords": ["symfony", "saml"],
+  "minimum-stability": "stable",
+  "homepage": "https://github.com/Wiser/SamlBundle",
+  "license": "apache-2.0",
+  "authors": [
+    {
+      "name": "Tristan Juhé"
+    }
+  ],
+  "require": {
+    "php": ">=8.1",
+    "ext-simplexml": "*",
+    "symfony/framework-bundle": "^5.3 || ^6.3",
+    "symfony/security-bundle": "^5.3 || ^6.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "Wiser\\SamlBundle\\": "src"
+    }
+  }
+}
