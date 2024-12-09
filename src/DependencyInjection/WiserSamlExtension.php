@@ -11,7 +11,7 @@ use Wiser\SamlBundle\Security\Http\Authenticator\SamlAuthenticator;
 
 class WiserSamlExtension extends ConfigurableExtension
 {
-    protected function loadInternal(array $mergedConfig, ContainerBuilder $container)
+    protected function loadInternal(array $mergedConfig, ContainerBuilder $container): void
     {
         $loader = new YamlFileLoader($container, new FileLocator(dirname(__DIR__).'/Resources/config'));
         $loader->load('services.yaml');
