@@ -163,7 +163,7 @@ class SamlAuthenticator extends AbstractAuthenticator implements AuthenticationE
                     function ($userIdentifier) use ($userAttributes) {
                         return new SamlUser(
                             $userIdentifier,
-                            $userAttributes['groups']
+                            $userAttributes['groups'] ?? []
                         );
                     }
                 ),
