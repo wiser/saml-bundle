@@ -101,7 +101,7 @@ class SamlAuthenticator extends AbstractAuthenticator implements AuthenticationE
      * Called when authentication is needed.
      * This redirects to home or to the IDP according to the configuration.
      */
-    public function start(Request $request, AuthenticationException $authException = null): Response
+    public function start(Request $request, ?AuthenticationException $authException = null): Response
     {
         return new RedirectResponse($this->httpUtils->generateUri($request, $this->loginPath));
     }
