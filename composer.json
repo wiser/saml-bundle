@@ -15,8 +15,8 @@
     "php": ">=8.2",
     "ext-openssl": "*",
     "ext-simplexml": "*",
-    "symfony/framework-bundle": "^6.4",
-    "symfony/security-bundle": "^6.4"
+    "symfony/framework-bundle": "^7.4",
+    "symfony/security-bundle": "^7.4"
   },
   "autoload": {
     "psr-4": {
